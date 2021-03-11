@@ -3,4 +3,6 @@
     <dimen name="big_32">32dp</dimen>
     <dimen name="small_16">16dp</dimen>
     <dimen name="loaded_size">40dp</dimen>
+    <dimen name="avatar_size_40">40dp</dimen>
+    <dimen name="online_size_4">4dp</dimen>
 </resources>

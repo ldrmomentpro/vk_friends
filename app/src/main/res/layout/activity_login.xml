@@ -4,44 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:background="#597da3"
+    tools:context=".activities.LoginActivity">
 
     <TextView
         android:id="@+id/tv_login_hello"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/big_32"
-        android:layout_marginTop="252dp"
         android:layout_marginEnd="@dimen/big_32"
         android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:textSize="24sp"
         android:text="@string/login_hello"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_16"
         android:text="@string/login_enter"
-        android:background="@color/purple_700"
+        android:background="#082567"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/tv_login_hello"
         app:layout_constraintStart_toStartOf="@+id/tv_login_hello"
         app:layout_constraintTop_toBottomOf="@+id/tv_login_hello" />
 
     <com.github.rahatarmanahmed.cpv.CircularProgressView
+        android:id="@+id/cpv_login"
         android:layout_width="@dimen/loaded_size"
         android:layout_height="@dimen/loaded_size"
+        android:layout_marginTop="@dimen/small_16"
+        android:visibility="gone"
+        app:cpv_animAutostart="true"
+        app:cpv_color="@color/purple_700"
+        app:cpv_indeterminate="true"
         app:layout_constraintEnd_toEndOf="@+id/btn_login"
         app:layout_constraintStart_toStartOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login"
-        android:layout_marginTop="@dimen/small_16"
-        app:cpv_color="@color/purple_700"
-        app:cpv_animAutostart="true"
-        app:cpv_indeterminate="true"/>
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
